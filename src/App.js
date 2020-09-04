@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { Footer } from './components/layout/Footer';
+import { ContentWrapper } from './components/content/ContentWrapper';
+import './App.scss';
 
-function App() {
+export const App = () => {
+  const palletType = 'dark';
+  const darkTheme = createMuiTheme({
+    palette: {
+      type: palletType,
+    }
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <ContentWrapper />
+      <Footer />
+    </ThemeProvider>
   );
 }
 
