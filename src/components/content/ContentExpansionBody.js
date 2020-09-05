@@ -42,4 +42,4 @@ export const ContentExpansionBody = ({ passList }) => {
       </Table>
     </TableContainer>
   );
-}
+};

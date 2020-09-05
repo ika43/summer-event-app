@@ -1,5 +1,5 @@
 import React from 'react';
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { Footer } from './components/layout/Footer';
 import { ContentWrapper } from './components/content/ContentWrapper';
 import './App.scss';
@@ -9,7 +9,7 @@ export const App = () => {
   const darkTheme = createMuiTheme({
     palette: {
       type: palletType,
-    }
+    },
   });
   return (
     <ThemeProvider theme={darkTheme}>
@@ -17,6 +17,6 @@ export const App = () => {
       <Footer />
     </ThemeProvider>
   );
-}
+};
 
 export default App;

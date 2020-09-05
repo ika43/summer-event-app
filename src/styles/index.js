@@ -1,9 +1,10 @@
-export { useContentBodyStyles,
-    useContentExpansionBodyStyles,
-    useContentExpansionStyles,
-    useContentHeaderStyles,
-    useContentWrapperStyles,
- } from './contentStyles';
+export {
+  useContentBodyStyles,
+  useContentExpansionBodyStyles,
+  useContentExpansionStyles,
+  useContentHeaderStyles,
+  useContentWrapperStyles,
+} from './contentStyles';
 
- export { useFormStyles } from './formStyles';
- export { useFooterStyles } from './footerStyles';
+export { useFormStyles } from './formStyles';
+export { useFooterStyles } from './footerStyles';

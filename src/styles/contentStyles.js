@@ -8,35 +8,35 @@ export const useContentBodyStyles = makeStyles((theme) => ({
     marginBottom: 10,
   },
   icon: {
-      padding: 10,
-      height: 20,
-      width: 20,
-  }
+    padding: 10,
+    height: 20,
+    width: 20,
+  },
 }));
 
 export const useContentExpansionStyles = makeStyles(() => ({
   collapse: {
-      width: '100%'
-  }
+    width: '100%',
+  },
 }));
 
 export const useContentExpansionBodyStyles = makeStyles({
   table: {
-    paddingTop: 20
+    paddingTop: 20,
   },
 });
 
 export const useContentHeaderStyles = makeStyles((theme) => ({
   paper: {
-      padding: theme.spacing(2),
-      margin: 'auto',
-      maxWidth: 600,
-      color: 'white',
-      display: 'flex'
-    },
+    padding: theme.spacing(2),
+    margin: 'auto',
+    maxWidth: 600,
+    color: 'white',
+    display: 'flex',
+  },
   mright: {
-      marginLeft: 'auto'
-  }
+    marginLeft: 'auto',
+  },
 }));
 
 export const useContentWrapperStyles = makeStyles((theme) => ({
@@ -46,6 +46,6 @@ export const useContentWrapperStyles = makeStyles((theme) => ({
     maxWidth: 600,
   },
   errorText: {
-    textAlign: 'center !important'
-  }
+    textAlign: 'center !important',
+  },
 }));
