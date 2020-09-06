@@ -1,7 +1,7 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import { FaWalking, FaBus, FaTram, FaQuestion, FaTrain } from 'react-icons/fa';
+import { FaWalking, FaBus, FaTram, FaTrain, FaEllipsisH } from 'react-icons/fa';
 import { ContentExpansion } from './ContentExpansion';
 import { getSectionDuration } from '../../helpers';
 import { useContentBodyStyles } from '../../theme-styles';
@@ -18,7 +18,7 @@ export const ContentBody = ({ section }) => {
       case 'IC':
         return <FaTrain className="icon" />;
       default:
-        return <FaQuestion className="icon" />;
+        return <FaEllipsisH className="icon" />;
     }
   };
   return (
@@ -47,7 +47,7 @@ export const ContentBody = ({ section }) => {
             <small>
               {getSectionDuration(
                 section.arrival.arrival,
-                section.departure.departure
+                section.departure.arrival || section.departure.departure
               )}
             </small>
           </Grid>
