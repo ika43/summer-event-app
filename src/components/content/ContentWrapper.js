@@ -5,6 +5,7 @@ import { Content } from './Content';
 import { Loader } from '../layout/Loader';
 import { SnackbarError } from '../snackbar/SnackbarError';
 import { Footer } from '../layout/Footer';
+import { Header } from '../layout/Header';
 
 export const ContentWrapper = () => {
   const [directions, setDirections] = useState({ from: '', to: '' });
@@ -15,6 +16,7 @@ export const ContentWrapper = () => {
   } = useDirections(directions);
   return (
     <>
+      <Header />
       <Form setDirections={setDirections} />
       {isLoading && <Loader />}
       {connections && connections[0] && (
