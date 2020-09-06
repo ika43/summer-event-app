@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField/TextField';
-import { useFormStyles } from '../../styles';
+import './Form.scss';
 
 export const Form = ({ setDirections }) => {
   const [formdata, setFormdata] = useState({ from: '', to: '' });
-  const classes = useFormStyles();
   const handleSubmit = (e) => {
     e.preventDefault();
     setDirections(formdata);
   };
   return (
-    <div className={classes.paper}>
+    <div className="formWrapper">
       <form autoComplete="off" onSubmit={handleSubmit}>
-        <div>
+        <div className="textInput">
           <TextField
             fullWidth
             label="From"
@@ -20,7 +19,7 @@ export const Form = ({ setDirections }) => {
             onChange={(e) => setFormdata({ ...formdata, from: e.target.value })}
           />
         </div>
-        <div className={classes.bottomInput}>
+        <div className="textInput">
           <TextField
             fullWidth
             label="To"
@@ -28,7 +27,7 @@ export const Form = ({ setDirections }) => {
             onChange={(e) => setFormdata({ ...formdata, to: e.target.value })}
           />
         </div>
-        <input className={classes.submitButton} type="submit" />
+        <input className="submitButton" type="submit" />
       </form>
     </div>
   );

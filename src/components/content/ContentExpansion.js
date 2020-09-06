@@ -1,13 +1,12 @@
-import { FaChevronDown } from 'react-icons/fa';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { ContentExpansionBody } from './ContentExpansionBody';
-import { useContentExpansionStyles } from '../../styles';
+import './Content.scss';
 
 export const ContentExpansion = ({ journey }) => {
-  const classes = useContentExpansionStyles();
   const [expand, setExpand] = useState(false);
   return (
     <>
@@ -23,16 +22,11 @@ export const ContentExpansion = ({ journey }) => {
         alignItems="center"
       >
         <IconButton onClick={() => setExpand(!expand)}>
-          <FaChevronDown />
+          {!expand ? <FaChevronDown /> : <FaChevronUp />}
         </IconButton>
       </Grid>
       <Grid container spacing={2}>
-        <Collapse
-          className={classes.collapse}
-          in={expand}
-          timeout="auto"
-          unmountOnExit
-        >
+        <Collapse className="collapse" in={expand} timeout="auto" unmountOnExit>
           <ContentExpansionBody passList={journey.passList} />
         </Collapse>
       </Grid>

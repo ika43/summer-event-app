@@ -4,20 +4,21 @@ import Paper from '@material-ui/core/Paper';
 import { FaWalking, FaBus, FaTram, FaQuestion, FaTrain } from 'react-icons/fa';
 import { ContentExpansion } from './ContentExpansion';
 import { getSectionDuration } from '../../helpers';
-import { useContentBodyStyles } from '../../styles';
+import { useContentBodyStyles } from '../../theme-styles';
+import './Content.scss';
 
 export const ContentBody = ({ section }) => {
   const classes = useContentBodyStyles();
   const renderIcon = (category) => {
     switch (category) {
       case 'B':
-        return <FaBus className={classes.icon} />;
+        return <FaBus className="icon" />;
       case 'T':
-        return <FaTram className={classes.icon} />;
+        return <FaTram className="icon" />;
       case 'IC':
-        return <FaTrain className={classes.icon} />;
+        return <FaTrain className="icon" />;
       default:
-        return <FaQuestion className={classes.icon} />;
+        return <FaQuestion className="icon" />;
     }
   };
   return (
@@ -27,7 +28,7 @@ export const ContentBody = ({ section }) => {
           {section.journey ? (
             renderIcon(section.journey.category)
           ) : (
-            <FaWalking className={classes.icon} />
+            <FaWalking className="icon" />
           )}
         </Grid>
         <Grid

@@ -1,7 +1,8 @@
 import React from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { Footer } from './components/layout/Footer';
+import { NotFound } from './components/layout/NotFound';
 import { ContentWrapper } from './components/content/ContentWrapper';
+import { Switch, Route } from 'react-router-dom';
 import './App.scss';
 
 export const App = () => {
@@ -13,8 +14,10 @@ export const App = () => {
   });
   return (
     <ThemeProvider theme={darkTheme}>
-      <ContentWrapper />
-      <Footer />
+      <Switch>
+        <Route path="/" component={ContentWrapper} exact />
+        <Route component={NotFound} />
+      </Switch>
     </ThemeProvider>
   );
 };

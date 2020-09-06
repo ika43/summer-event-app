@@ -4,7 +4,7 @@ import { ContentBody } from './ContentBody';
 
 export const Content = ({ connections }) => {
   return (
-    <div>
+    <div className="contentHeader">
       <ContentHeader
         duration={connections.duration}
         transfers={connections.transfers}
