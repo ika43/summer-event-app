@@ -6,8 +6,9 @@ export const Form = ({ setDirections }) => {
   const [formdata, setFormdata] = useState({ from: '', to: '' });
   const handleSubmit = (e) => {
     e.preventDefault();
-    setDirections(formdata);
+    if (formdata.from && formdata.to) setDirections(formdata);
   };
+
   return (
     <div className="formWrapper">
       <form autoComplete="off" onSubmit={handleSubmit}>
@@ -15,6 +16,7 @@ export const Form = ({ setDirections }) => {
           <TextField
             fullWidth
             label="From"
+            name="from"
             value={formdata.from}
             onChange={(e) => setFormdata({ ...formdata, from: e.target.value })}
           />
@@ -23,6 +25,7 @@ export const Form = ({ setDirections }) => {
           <TextField
             fullWidth
             label="To"
+            name="to"
             value={formdata.to}
             onChange={(e) => setFormdata({ ...formdata, to: e.target.value })}
           />

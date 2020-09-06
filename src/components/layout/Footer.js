@@ -6,7 +6,7 @@ import { useFooterStyles } from '../../theme-styles';
 export const Footer = () => {
   const classes = useFooterStyles();
   return (
-    <footer className={classes.footer}>
+    <footer className={classes.footer} data-testid="footer">
       <Grid container direction="row" justify="center" alignItems="center">
         <div>
           <FaShip />

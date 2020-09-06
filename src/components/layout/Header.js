@@ -5,8 +5,10 @@ import { useHeaderStyles } from '../../theme-styles';
 export const Header = () => {
   const classes = useHeaderStyles();
   return (
-    <Grid container direction="row" justify="center" alignItems="center">
-      <div className={classes.title}>Input locations and type enter</div>
-    </Grid>
+    <header data-testid="header">
+      <Grid container direction="row" justify="center" alignItems="center">
+        <div className={classes.title}>Input locations and type enter</div>
+      </Grid>
+    </header>
   );
 };
