@@ -23,7 +23,7 @@ For development, you will only need Node.js and a node global package installed 
 
 ## Docker build
     $ docker build -t <your username>/summer-event-app .
-    $ docker run -p 8080:8080 -d <your username>/summer-event-app
+    $ docker run -p 3000:3000 -d <your username>/summer-event-app
 
 ## Build for production mode
     $ npm run build
